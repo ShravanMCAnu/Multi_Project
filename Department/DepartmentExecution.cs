@@ -22,15 +22,17 @@ namespace Department
             
 
 
-            objDB_Connection.DBClearD("department");
+          
             New_DepartmentList objNew_DepartmentList = new New_DepartmentList();
-            objNew_DepartmentList.EmployeeNewList();
+            objNew_DepartmentList.DepartmentList();
             objNew_DepartmentList.DisplayNewListItems();
 
             Console.WriteLine("Lastly\n\t" +
                 "Department TAble values Added into the New List");
 
             Console.WriteLine("\nPress Enter to exit the table");
+
+            objDB_Connection.DBClearD("department");
         }
     }
 }

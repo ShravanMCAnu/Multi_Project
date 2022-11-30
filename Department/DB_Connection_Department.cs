@@ -145,7 +145,7 @@ namespace Department
             Console.WriteLine("Enter department shortName");
             string shortname = Console.ReadLine();
             conn.Open();
-            SqlCommand cmd5 = new SqlCommand("insert into  department values('" + deptName + "','" + shortname + "')", conn);
+            SqlCommand cmd5 = new SqlCommand("insert into department values('"+deptName + "','"+shortname+"')", conn);
 
            
             cmd5.ExecuteNonQuery();

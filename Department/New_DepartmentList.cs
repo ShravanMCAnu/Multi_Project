@@ -10,11 +10,11 @@ namespace Department
     internal class New_DepartmentList : DB_Connection_Department
     {
         List<Dept_Properties> newList = new List<Dept_Properties>();
-        public void EmployeeNewList()
+        public void DepartmentList()
         {
             SqlConnection sqlCon = new SqlConnection("Server=LAPTOP-BJF2P1AA;Database=DatabaseOne;Trusted_Connection=true;");
             sqlCon.Open();
-            string query = "Select * from Employees";
+            string query = "Select * from department";
             SqlCommand cmd = new SqlCommand(query, sqlCon);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.HasRows)
@@ -23,9 +23,9 @@ namespace Department
                 {
                     newList.Add(new Dept_Properties()
                     {
-                        Department_id = (int)dr["Employee_Id"],
-                        Department_Name = dr["Employee_Name"].ToString(),
-                        Department_shortName = dr["Gender"].ToString()
+                        Department_id = (int)dr["Department_id"],
+                        Department_Name = dr["Department_Name"].ToString(),
+                        Department_shortName = dr["Department_shortName"].ToString()
                     });
                 }
                 sqlCon.Close();

@@ -146,7 +146,7 @@ namespace Employee
             }
 
             conn.Close();
-
+            Console.WriteLine("To insert values ");
             Console.WriteLine("Enter Employee Name ");
             string EmpName = Console.ReadLine();
             Console.WriteLine("Enter Employee Age");

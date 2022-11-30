@@ -25,7 +25,7 @@ namespace Department
 
 
 
-            db.DBClearE();
+            
 
 
             New_EmployeeList newList = new New_EmployeeList();
@@ -34,7 +34,7 @@ namespace Department
 
             Console.WriteLine("Lastly\n\tEmployee Table values Added into the New List");
             Console.WriteLine("\nPress Enter to exit the table");
-
+            db.DBClearE();
 
         }
     }
